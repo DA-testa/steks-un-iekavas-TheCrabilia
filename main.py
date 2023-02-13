@@ -23,7 +23,11 @@ def find_mismatch(text: str) -> str:
 
 
 def main():
-    mode = input("Choose mode (I - manual input, F - read from file): ").upper()
+    mode = (
+        input("Choose mode (I - manual input, F - read from file): ")
+        .strip()
+        .upper()
+    )
     match mode:
         case "I":
             text = input()
